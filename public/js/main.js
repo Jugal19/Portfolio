@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Fetch header content
-    fetch("http://localhost:8080/includes/header.html")
+    fetch("/includes/header.html") // Use relative path
         .then(response => response.text())
         .then(data => {
             document.querySelector("header").innerHTML = data;
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
     // Fetch footer content
-    fetch("http://localhost:8080/includes/footer.html")
+    fetch("/includes/footer.html") // Use relative path
         .then(response => response.text())
         .then(data => {
             document.querySelector("footer").innerHTML = data;
